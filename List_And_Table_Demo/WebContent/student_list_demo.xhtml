@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+		<h:head>
+			<title> Student List</title>
+		</h:head>
+		
+		<h:outputStylesheet library="css" name=""student_table_demo.css>
+		
+		<!-- 
+		<h:body>
+			
+			<ul>
+			<!-- in studentDataUtil.students studentDataUtil is the bean and .student is gonna call getStudents() -->
+			
+				<ui:repeat value="#{studentDataUtil.students}"  var="tempStudent" >
+					<li>#{tempStudent.firstName} #{tempStudent.lastName}</li>
+				</ui:repeat>
+			</ul>
+		
+		</h:body>
+		 -->
+		 
+		 <h:body>
+		 
+		 	<h:dataTable value="#{studentDataUtil.students}" var="temp"
+		 					styleClass="demo-table"
+		 					headerClass="demo-table-header"
+		 					rowClasses="demo-table-odd-row,demo-table-even-row" >
+		 					
+		 					<h:column>
+		 					<!-- column header -->
+		 					
+		 					</h:column>
+		 	</h:dataTable>
+		 
+		 </h:body>
+
+</html>
